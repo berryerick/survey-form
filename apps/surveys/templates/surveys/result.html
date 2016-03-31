@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-	<p>Thanks for submitting this form! You have submitted this form ____ times now!</p>
+	<p>Thanks for submitting this form! You have submitted this form {{ count }} times now!</p>
 	<form action="{% url 'index' %}" method="post">
 		{% csrf_token %}
 		<h2>Submitted information</h2>
@@ -19,10 +19,10 @@
 			<li>Comment:</li>
 		</ul>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li> {{ info.name }}</li>
+			<li> {{ info.location }} </li>
+			<li> {{ info.language }} </li>
+			<li> {{ info.comment }} </li>
 		</ul>
 		<div class="footer">
 			<input class="submit" type="submit" value="Go Back"></input>
