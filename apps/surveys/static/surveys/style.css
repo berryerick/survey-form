@@ -1,0 +1,46 @@
+*{
+	font-family: sans-serif;
+
+}
+div.container{
+	width:800px;
+	margin: 0 auto;
+	/*text-align: center;*/
+}
+
+	form{
+		width: 100%
+		margin-top: 20px;
+		background-color: silver;
+		padding: 20px;
+	}
+		ul{
+			list-style: none;
+			display:  inline-block;
+			width: 40%;
+			vertical-align: top;
+		}
+			li{
+				text-align: left;
+				font-size: 1.25em;
+				margin-top:10px;
+			}
+		input.submit{
+			padding: 10px;
+			border: none;
+			color: white;
+			font-weight: bold;
+			font-size: 1.25em;
+			background-color: rgb(60,90,200);
+		}
+		textarea{
+			width: 90%;
+			resize: none;
+			height: 100px;
+			margin: 0 auto;
+			display: block;
+		}
+		div.footer{
+			text-align: right;
+			margin-top: 20px;
+		}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'surveys/style.css' %}">
+</head>
+<body>
+	<div class="container">
+		<form action="{% url 'process_form' %}" method="post">
+			{% csrf_token %}
+			<h1>Welcome</h1>
+			<h2>Please provide your information</h2>
+			<ul>
+				<li><label for="name">Your name</label></li>
+				<li><label for="location">Dojo location</label></li>
+				<li><label for="language">Dojo language</label></li>
+				<li><label for="comment">Comment (optional)</label></li>
+			</ul>
+			<ul>
+				<li><input type="text" name="name"></input></li>
+				<li>
+					<select name="location">
+						<option value="mountain view">Mountain View</option>
+						<option value="seattle">Seattle</option>
+						<option value="london">london</option>
+						<option value="mars">Mars</option>
+					</select>
+				</li>
+				<li>
+					<select name="language">
+						<option value="python">python</option>	
+						<option value="javascript">javascript</option>	
+						<option value="html">html</option>	
+					</select>
+				</li>
+			</ul>
+			<textarea name="comment"></textarea>
+			<div class="footer">
+				<input class="submit" type="submit" value="Submit"></input>
+			</div>
+		</form>
+
+</body>
+</html>
